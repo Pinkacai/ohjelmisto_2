@@ -1,4 +1,3 @@
-import random
 class Car:
     def __init__(self, reg_num, max_speed):
         self.reg_num = reg_num
@@ -17,13 +16,6 @@ class Car:
     def drive(self,time):
         self.travelled_dist = self.travelled_dist + (time * self.current_speed)
         return self.travelled_dist
-
-
-cars = []
-for i in range(1,11):
-    reg_num = f"ABC-{i}"
-    max_speed = random.randint(100, 201)
-    cars.append(Car(reg_num,max_speed))
 
 
 car1 = Car("ABC-123", 142)
