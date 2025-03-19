@@ -14,7 +14,7 @@ class Car:
      return self.current_speed
 
 
-car1 = Car("ABD-123", 142)
+car1 = Car("ABC-123", 142)
 speed1 = car1.acceleration(30)
 speed2 = car1.acceleration(70)
 speed3 = car1.acceleration(50)

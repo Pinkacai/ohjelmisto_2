@@ -7,7 +7,7 @@ class Car:
 
 
 
-car1 = Car("ABD-123", 142)
+car1 = Car("ABC-123", 142)
 
 print("")
 print(f"The registration number of the new car is {car1.reg_num}, it's max speed is {car1.max_speed}km/h."
