@@ -9,10 +9,6 @@ class Elevator:
         while self.location < floor:
             self.floor_up()
             print(f"Elevator number {elevator_number} is at floor: {self.location}")
-        print("Going down!")
-        while self.location > self.bottom_floor:
-            self.floor_down()
-            print(f"Elevator number {elevator_number} is at floor: {self.location}")
 
     def floor_up(self):
         self.location = self.location + 1
@@ -34,7 +30,7 @@ class Building:
             self.elevators[elevator_number].go_to_floor(floor)
 
 flo = int(input("Which floor would you like to go to?: "))
-b = Building(0,10,6)
+b = Building(0,10,7)
 
 elevator_number = int(input("Which elevator would you like to use?(1-6): "))
 b.run_elevator(elevator_number,flo)
