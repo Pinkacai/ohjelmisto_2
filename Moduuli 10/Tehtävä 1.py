@@ -1,0 +1,32 @@
+
+class Elevator:
+    def __init__(self,bottom_floor,top_floor):
+        self.bottom_floor = bottom_floor
+        self.top_floor = top_floor
+        self.location = 0
+
+    def go_to_floor(self,floor):
+        print("Going up!")
+        while h.location <= floor:
+            h.floor_up()
+            print(f"You are at floor: {h.location}")
+        print("Going down!")
+        while h.location > 0:
+            h.floor_down()
+            print(f"You are at floor: {h.location}")
+
+    def floor_up(self):
+        h.location = h.location + 1
+
+    def floor_down(self):
+        h.location = h.location - 1
+
+h = Elevator(0,10)
+print("")
+flo = int(input("Which floor would you like to go to?: "))
+if flo <= h.top_floor:
+    h.go_to_floor(flo-1)
+else:
+    print("That floor does not exist!")
+
+
