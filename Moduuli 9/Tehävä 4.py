@@ -1,4 +1,5 @@
 import random
+
 cars = []
 race_ongoing = True
 class Car:
