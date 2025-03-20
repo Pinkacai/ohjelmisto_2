@@ -39,11 +39,9 @@ while race_ongoing:
 print("")
 print("Final Race Results:")
 print("")
+print(f"{'Registration number:':<15} {'Distance (km)':<15} {'Current speed:':<15} {' top speed:':<10}")
 for car in cars:
-    print(f"Car {car.reg_num}:"
-          f"\nIt travelled a Distance of {car.travelled_dist}km."
-          f"\nIt finished with a speed of {car.current_speed}km/h."
-          f"\nIt's max speed was {car.max_speed}km/h.")
+    print(f"{car.reg_num:<24}{car.travelled_dist:<18}{car.current_speed:<15}{car.max_speed:<15}")
     print("")
 
 
