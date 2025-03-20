@@ -7,19 +7,19 @@ class Elevator:
 
     def go_to_floor(self,floor):
         print("Going up!")
-        while h.location <= floor:
-            h.floor_up()
-            print(f"You are at floor: {h.location}")
+        while self.location <= floor:
+            self.floor_up()
+            print(f"You are at floor: {self.location}")
         print("Going down!")
-        while h.location > 0:
-            h.floor_down()
-            print(f"You are at floor: {h.location}")
+        while self.location > 0:
+            self.floor_down()
+            print(f"You are at floor: {self.location}")
 
     def floor_up(self):
-        h.location = h.location + 1
+        self.location = self.location + 1
 
     def floor_down(self):
-        h.location = h.location - 1
+        self.location = self.location - 1
 
 h = Elevator(0,10)
 print("")
