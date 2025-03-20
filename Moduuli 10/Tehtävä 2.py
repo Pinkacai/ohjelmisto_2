@@ -2,7 +2,7 @@ class Elevator:
     def __init__(self,bottom_floor,top_floor):
         self.bottom_floor = bottom_floor
         self.top_floor = top_floor
-        self.location = 0
+        self.location = bottom_floor
 
     def go_to_floor(self,floor):
         print("Going up!")
@@ -10,7 +10,7 @@ class Elevator:
             self.floor_up()
             print(f"Elevator number {elevator_number} is at floor: {self.location}")
         print("Going down!")
-        while self.location > 0:
+        while self.location > self.bottom_floor:
             self.floor_down()
             print(f"Elevator number {elevator_number} is at floor: {self.location}")
 
