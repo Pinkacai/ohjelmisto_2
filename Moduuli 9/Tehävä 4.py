@@ -36,6 +36,8 @@ while race_ongoing:
             race_ongoing = False
             break
 
+
+cars.sort(key= lambda a: a.travelled_dist, reverse=True)
 print("")
 print("Final Race Results:")
 print("")
