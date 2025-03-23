@@ -1,5 +1,5 @@
 import random
-
+print("")
 cars = []
 
 class Car:
@@ -8,7 +8,6 @@ class Car:
         self.max_speed = max_speed
         self.current_speed = 0
         self.travelled_dist = 0
-        self.time = 0
 
 
      def acceleration(self,speeds):
@@ -22,9 +21,6 @@ class Car:
      def drive(self,time):
          self.travelled_dist = self.travelled_dist + (time * self.current_speed)
          return self.travelled_dist
-     def time_passed(self):
-         self.time = self.time + 1
-         return self.time
 
 
 class Race:
@@ -33,11 +29,9 @@ class Race:
         self.dist = dist
         self.list_of_cars = list_of_cars
     def hour_passes(self):
-        i = 1
         for car in cars:
             car.acceleration(random.randint(-10, 15))
             car.drive(1)
-            i = i +1
         return
     def print_status(self):
         cars.sort(key=lambda a: a.travelled_dist, reverse=True)
@@ -56,24 +50,32 @@ for i in range(1,11):
     reg_num = f"ABC-{i}"
     max_speed = random.randint(100, 200)
     cars.append(Car(reg_num,max_speed))
+
 r = Race(Car in cars,Car.drive,cars)
 
-
-
+leading_car = []
+time1 = 0
 while not r.race_finished():
     r.hour_passes()
-    #for car in cars:
-        #if Car.time_passed(car) % 10 == 0:
-    r.print_status()
-            #print(Car.time_passed(car))
+    time1 = time1 + 1
+    if time1  % 10 == 0:
+        print(f"{time1} hours have passed:")
+        r.print_status()
     r.race_finished()
 
+winning_car= []
 if Race.race_finished:
     cars.sort(key= lambda a: a.travelled_dist, reverse=True)
     print("")
-    print("Final Race Results:")
+    print(f"The race has finished in {time1} hours.")
+    for car in cars:
+        if car.travelled_dist >= 8000:
+            winning_car.append(car.reg_num)
+    print(f"Car {winning_car[0]} has won the race!")
+    print("Final race results: ")
     print("")
     print(f"{'Registration number:':<15} {'Distance (km)':<15} {'Current speed:':<15} {' top speed:':<10}")
     for car in cars:
         print(f"{car.reg_num:<24}{car.travelled_dist:<18}{car.current_speed:<15}{car.max_speed:<15}")
         print("")
+
