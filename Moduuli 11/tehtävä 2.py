@@ -36,7 +36,7 @@ class Car:
 
 class ElectricCar(Car):
     def __int__(self,reg_num,max_speed,type,capacity):
-        capacity = 0
+        capacity = 52.5
         super().__init__(reg_num,max_speed,type)
         self.capacity = capacity + capacity
 
@@ -46,7 +46,7 @@ class ElectricCar(Car):
 
 class GasolineCar(Car):
     def __int__(self,reg_num,max_speed,type,volume):
-        volume = 0
+        volume = 32.3
         super().__init__(reg_num,max_speed,type)
         self.volume = volume + volume
     def print_information(self):
